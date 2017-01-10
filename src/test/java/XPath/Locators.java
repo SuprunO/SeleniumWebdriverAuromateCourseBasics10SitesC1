@@ -13,6 +13,6 @@ public class Locators {
         WebDriver driver = new FirefoxDriver();
         driver.get("http://techno-geek.co.uk/callmycab");
         driver.manage().window().maximize();
-        driver.findElement(By.xpath(".//*[@id='navbar']/ul/li[1]/a/nav/span[2]"));
+        driver.findElement(By.xpath(".//*[@id='navbar']/ul/li[1]/a/nav/span[2]")).click();
     }
 }
