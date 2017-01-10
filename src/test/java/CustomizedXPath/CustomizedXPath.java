@@ -3,7 +3,9 @@ package CustomizedXPath;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Wait;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
 /**
  * Created by alex on 10.01.2017.
@@ -14,6 +16,7 @@ public class CustomizedXPath {
         WebDriver driver =new FirefoxDriver();
         driver.get("http://techno-geek.co.uk/callmycab/callmycab/page_index/Register.php");
         driver.manage().window().maximize();
+        WebDriverWait wait = new WebDriverWait(driver,10);
 
         //Customized XPATH
 
@@ -24,6 +27,12 @@ public class CustomizedXPath {
         driver.findElement(By.xpath("//input [@id='under_13']")).click();
         driver.findElement(By.xpath("//input [@id='job']")).sendKeys("Analyst");
         driver.findElement(By.xpath("//input [@id='address']")).sendKeys("Kiev,Ukraine, Lepase, st 26B");
-        driver.findElement(By.xpath("//input [@id='business']")).click();
+
+        wait.until(ExpectedConditions.elementToBeClickable(By.id("submit")));
+
+
+
+
+
     }
 }
