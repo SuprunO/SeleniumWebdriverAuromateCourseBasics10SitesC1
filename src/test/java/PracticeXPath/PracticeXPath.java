@@ -2,13 +2,10 @@ package PracticeXPath;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
-import java.util.List;
-import java.util.Set;
 
 /**
  * Created by alex on 11.01.2017.
@@ -17,7 +14,7 @@ public class PracticeXPath {
 
     public static void main(String[] args) {
         WebDriver driver = new FirefoxDriver();
-        WebDriverWait wait = new WebDriverWait(driver,10);
+        WebDriverWait wait = new WebDriverWait(driver,30);
 
         driver.get("http://techno-geek.co.uk/SeleniumPractice/Form.html");
         driver.findElement(By.xpath("//input[@id='email']")).sendKeys("oleksiisuprun@gmail.com");
